@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for encoding and responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts for the classic arcade style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet" />
+
+    <!-- Linking styles and scripts for game functionality -->
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+    <title>The Best PONG Game</title>
+  </head>
+  <body>
+    <!-- Game title -->
+    <h1 class="title">PONG</h1>
+
+    <!-- Score displays for both players -->
+    <span class="score player1Score" id="player1Score">0</span>
+    <span class="score player2Score" id="player2Score">0</span>
+
+    <!-- Start text prompt displayed until game begins -->
+    <h3 class="startText" id="startText">Press any key to start the game</h3>
+
+    <!-- Game area container to hold all interactive game elements -->
+    <div class="gameArea">
+      <div id="paddle1" class="paddle1 paddle"></div>
+      <!-- Left paddle for Player 1 -->
+      <div id="paddle2" class="paddle2 paddle"></div>
+      <!-- Right paddle for Player 2 -->
+      <div id="ball" class="ball"></div>
+      <!-- The game ball -->
+      <div class="net"></div>
+      <!-- Net in the center for visual clarity -->
+    </div>
+
+    <!-- Background image for arcade effect -->
+    <img src="/assets/machine.png" alt="Arcade Pong Machine" class="bg" />
+
+    <!-- Dark gradient overlay for a retro vignette effect -->
+    <div class="vignett"></div>
+
+    <!-- Audio effects to enhance game experience -->
+    <audio src="/assets/paddle.wav" id="paddleSound"></audio>
+    <audio src="/assets/wall.wav" id="wallSound"></audio>
+    <audio src="/assets/loss.wav" id="lossSound"></audio>
+
+    <footer class="footer">
+      <p>Created by Karthik PB</p>
+      <p>Published on: October 29, 2024</p>
+    </footer>
+  </body>
+</html>

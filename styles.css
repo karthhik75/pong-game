@@ -1,0 +1,136 @@
+/* General body styling */
+body {
+  font-family: "Press Start 2P", system-ui; /* Retro font for classic game vibe */
+  height: 100dvh; /* Full viewport height */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111; /* Dark background for immersive experience */
+  color: rgba(255, 255, 255, 0.9); /* Light text for high contrast */
+  overflow: hidden;
+}
+
+/* Main game area styling */
+.gameArea {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: rgba(
+    7,
+    26,
+    49,
+    0.6
+  ); /* Semi-transparent overlay for the game area */
+  top: 182px;
+  border: #919bbec7 10px solid; /* Border gives a defined game space */
+  border-radius: 4px;
+  backdrop-filter: blur(4px); /* Slight blur for a vintage feel */
+  transform: perspective(1000px) rotateX(33deg) scaleX(0.54) scaleY(0.84); /* Adds 3D perspective */
+}
+
+/* Background image styling */
+.bg {
+  position: absolute;
+  height: 1000px; /* Over-sized background for depth */
+  z-index: -1; /* Push background behind the main elements */
+}
+
+/* Paddle styling */
+.paddle {
+  height: 100px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Light paddles for visibility */
+  position: absolute;
+  top: 150px; /* Initial position in the middle */
+}
+
+.paddle2 {
+  right: 0; /* Right paddle position */
+}
+
+/* Ball styling */
+.ball {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Keeps ball visible */
+  border-radius: 2px; /* Rounded edges for aesthetic */
+  left: 290px; /* Center position for ball */
+  top: 190px;
+  box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.9); /* Drop shadow for depth */
+}
+
+/* Net styling for middle of the game area */
+.net {
+  position: absolute;
+  border-right: 8px rgba(255, 255, 255, 0.3) dotted; /* Dotted line for classic feel */
+  height: 96%; /* Nearly full height of game area */
+  top: 2%;
+  left: calc(50% - 4px); /* Centered */
+}
+
+/* Title styling */
+.title {
+  position: absolute;
+  top: 88px;
+  font-size: 26px; /* Clear, readable title size */
+}
+
+/* Score display styling */
+.score {
+  position: absolute;
+  top: 88px;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center; /* Centering score within circle */
+}
+
+.player1Score {
+  left: calc(50% - 200px); /* Player 1's score on the left */
+}
+
+.player2Score {
+  right: calc(50% - 200px); /* Player 2's score on the right */
+}
+
+/* Instructions display at start of game */
+.startText {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centered on screen */
+  text-align: center;
+  background: #222; /* Slightly darker background */
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Vignette effect to give depth to the background */
+.vignett {
+  height: 100dvh;
+  width: 100dvw;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* Gradient gives a fading effect */
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: auto;
+  max-width: 150px;
+  text-align: left;
+}
